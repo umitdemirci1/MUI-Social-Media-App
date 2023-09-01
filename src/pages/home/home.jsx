@@ -1,13 +1,21 @@
-import { Button } from "@mui/material";
+import { Box, Button, Stack } from "@mui/material";
+import Sidebar from "../../components/sidebar/Sidebar";
+import Feed from "../../components/feed/feed";
+import Rightbar from "../../components/rightbar/Rightbar";
+import Navbar from "../../components/navbar/Navbar";
+import AddButton from "../../components/add-button/AddButton";
 
 const Home = () => {
   return (
-    <div>
-      <p>This is home</p>
-      <Button variant="contained" color="secondary">
-        Hello World!
-      </Button>
-    </div>
+    <Box>
+      <Navbar />
+      <Stack direction="row" spacing={2} justifyContent="space-between">
+        <Sidebar />
+        <Feed />
+        <Rightbar />
+        <AddButton />
+      </Stack>
+    </Box>
   );
 };
 
